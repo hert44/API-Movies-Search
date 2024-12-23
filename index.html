@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./app.css">
 </head>
 <body>
-<h1>My Movies Finder</h1>
+<h1>My Shows Finder</h1>
 <form id="searchForm">
     <input type="text" placeholder="Search any movie" name="query">
     <button>Search</button>
 </form>
+<div id="searchResults">
+    <h2 id="currentSearchText"></h2>
+    <ul id="searchResultsData">
+
+    </ul>
+</div>
 
 <script src="./app.js"></script>
 </body>
