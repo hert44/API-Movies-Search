@@ -16,11 +16,15 @@ searchForm.addEventListener("submit", async function(e) {
 
         let tempDataDiv = document.createElement("div");
         let tempDataImage = document.createElement("img");
-        tempDataImage.src = individualData.show.image.medium;
+        if(individualData.show.image === null){
+            tempDataImage.src = "./notfound.png";
+        }else{
+            tempDataImage.src = individualData.show.image.medium;
+        }
         let tempDataTitle = document.createElement("h3");
         tempDataTitle.innerHTML = individualData.show.name;
         let tempDataScore = document.createElement("p");
-        tempDataScore.innerHTML = `Rating: ${(individualData.score*10).toFixed(1)}/10`;
+        tempDataScore.innerHTML = `Rating: ${(individualData.score*10).toFixed(1)} / 10`;
         let tempDataLink = document.createElement("a");
         tempDataLink.href = `https://www.google.com/search?q=${tempDataTitle.innerHTML}+where+to+watch`
         tempDataLink.target = "_blank";

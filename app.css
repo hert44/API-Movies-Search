@@ -1,9 +1,13 @@
 
 :root {
-    --body-bg-color: rgb(26, 47, 16);
+    --body-bg-color: rgb(23, 23, 23);
     --search-results-bg-color: rgb(38, 38, 38);
 }
 
+body{
+    background-color: var(--body-bg-color);
+    color: white;
+}
 
 #searchResultsData{
     display: flex;
@@ -22,6 +26,10 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+}
+
+#searchResultsData img{
+    width: 100%;
 }
 
 #searchResultsData a{
